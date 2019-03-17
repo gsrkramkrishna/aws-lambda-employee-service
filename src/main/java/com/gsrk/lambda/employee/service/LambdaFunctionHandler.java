@@ -51,7 +51,7 @@ public class LambdaFunctionHandler implements RequestHandler<S3Event, String> {
     
     private KafkaProducer<String, String> kafkaConfig(){
     	Properties props = new Properties();
-        props.put("bootstrap.servers", "ec2-54-191-244-6.us-west-2.compute.amazonaws.com:9092");
+        props.put("bootstrap.servers", "awspublicdnsname:9092");
         props.put("acks", "all");
         props.put("retries", 0);
         props.put("batch.size", 16384);
